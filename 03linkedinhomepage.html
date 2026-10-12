@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DILEEP PD | Linkedin</title>
+    <link rel="stylesheet" href="03linkedincss.css">
+    <link rel="shortcut icon" href="akt4ae504epesldzj74dzred8.svg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/cdf253b0f2.js" crossorigin="anonymous"></script>
+    <style>
+        /* :root {
+        --top-spacing: 20px;     
+        --bottom-spacing: 20px;  
+        } */
+        *{
+            box-sizing:border-box;
+            padding:0;
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #0b0c0c;
+            height: 100vh;
+        }
+        .linkedin-header{
+            top:0;
+            height: 9vh;
+            width: 100%;
+            background-color: #1b1f23;
+            position:fixed;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            z-index: 1;
+        }
+        .logo-section, .nav-section{
+            margin:auto;
+            height: 40px;
+            align-items: center;
+            display: flex;
+            gap: 4px;
+            width: 40%;
+        }
+        .logo-section{
+            margin-left: 20px;
+        }
+        .nav-section{
+            justify-content: left;
+            gap:1px;
+            width: 60%;
+        }
+        .logo-section a .logo{
+            height: 70%;
+            color:#292828;
+            background-color:white;
+            padding: 3px;
+        }
+        .header-search{
+            border: 1px solid #a3a3a3;
+            height: 70%;
+            width: 200px;
+            border-radius: 30px;
+            background-color: transparent;
+            box-sizing:content-box;
+            display: block;
+            padding-left: 5px;
+            cursor:text;
+            transition: width 0.3s;
+        }
+        .header-search:focus-within{
+            width:100%;
+        }
+        .header-search .searchicon{
+            color:white;
+            float: left;
+            height: 100%;
+            cursor: pointer;
+        }
+        .searchiconhidden{
+            padding-left: 10px;
+            color:white;
+            float: left;
+            height: 100%;
+            cursor: pointer;
+            display: none;
+        }
+        .header-search input{
+            background-color: transparent;
+            border:none;
+            outline: none;
+            width: 90%;
+            height: 40px;
+            max-height: 100%;
+            border-radius: 30px;
+            color: white;
+            float: left;
+        }
+        .main-nav li, .side-nav li {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:1px;
+        }
+        .main-nav , .side-nav{
+            margin: auto;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap:1rem;
+            padding: 0 1rem 0 1rem;
+        }
+
+        .side-nav li a{
+            color:goldenrod;
+            font-size: 0.7rem;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-nav li, .side-nav li{
+            opacity: 0.5;
+        }
+        .main-nav li:hover, .side-nav li:hover{
+            opacity: 1;
+        }
+        .main-nav p, .icons, .side-nav p{
+            color: white;
+            font-size: 0.7rem;
+        }
+        .icons{
+            font-size: 1.5rem;
+        }
+        .left-card{
+            background-color: #1b1f23;
+            width: 250px;
+            border: 1px solid #333940;
+            border-radius: 12px;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .center-card{
+            background-color: #1b1f23;
+            width: 550px;
+            min-height: max-content;
+            border: 1px solid #333940;
+            border-radius: 12px;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .right-card{
+            background-color: #1b1f23;
+            width: 300px;
+            min-height: max-content;
+            border: 1px solid #333940;
+            border-radius: 12px;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        
+        .card-banner img {
+            width: 100%;
+            height: 70px;
+            object-fit: cover;
+            display: block;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .card-body {
+            padding: 0 16px 16px;
+            position: relative;
+        }
+        .avatar-container {
+            margin-top: -38px;
+            margin-bottom: 12px;
+        }
+        .avatar-img {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 3px solid #1b1f23;
+            object-fit: cover;
+            display: block;
+        }   
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .user-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.2px;
+        }
+        .user-headline {
+            font-size: 0.85rem;
+            color: #cfd3d8;
+            margin: 0;
+            line-height: 1.35;
+        }
+        .user-location {
+            font-size: 0.8rem;
+            color: #8c96a0;
+            margin-top: 2px;
+        }
+        .company-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 14px;
+        }
+        .spacebw{
+            justify-content: space-between;
+        }
+        .company-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+        }
+        .company-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #e4e6eb;
+        }
+
+        .ad-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #21262d;
+  gap: 16px;
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.cta-title {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #f0f6fc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cta-domain {
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+.apply-btn {
+  background: transparent;
+  color: #58a6ff;
+  border: 1.5px solid #58a6ff;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.apply-btn:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+}
+
+        .ad-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px 12px;
+  background-color: #1b1f23;
+}
+
+/* Left action icon cluster */
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #c9d1d9;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.action-btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.action-btn:hover {
+  color: #58a6ff;
+}
+
+/* Right overlapping reaction pills */
+.reactions-stack {
+  display: flex;
+  align-items: center;
+}
+
+.reaction-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #1b1f23;
+  margin-left: -5px;
+  font-size: 11px;
+}
+
+.reactions-stack .reaction-badge:first-child {
+  margin-left: 0;
+}
+
+.like-badge { background-color: #1b65d6; }
+.clap-badge { background-color: #3b8b40; }
+.laugh-badge { background-color: #0097a7; }
+.sidebar-footer {
+    max-width: 300px;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-align: center;
+}
+
+/* Links List Layout */
+.footer-links {
+  list-style: none;
+  margin: 0 0 16px 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 14px;
+}
+
+.footer-links a {
+  color: #a8b3cf;
+  text-decoration: none;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+  color: #70b5f9;
+  text-decoration: underline;
+}
+
+/* Dropdown Caret Icon */
+.dropdown-link .caret {
+  width: 10px;
+  height: 10px;
+  margin-left: 3px;
+  fill: #a8b3cf;
+}
+
+.dropdown-link:hover .caret {
+  fill: #70b5f9;
+}
+
+/* Copyright Row */
+.footer-copyright {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #e1e7ed;
+  font-size: 0.75rem;
+}
+
+/* Logo styling */
+.brand-text {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: -0.5px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-badge {
+  background-color: #fff;
+  color: #000;
+  border-radius: 2px;
+  padding: 0 2px;
+  font-size: 0.78rem;
+  margin-left: 1px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.copyright-text {
+  color: #c9d1d9;
+}
+.news-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f0f6fc;
+}
+
+.info-btn {
+  background: transparent;
+  border: none;
+  color: #8b949e;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.info-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Headings */
+.section-subtitle {
+  margin: 0 0 8px 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #8b949e;
+}
+
+.section-title {
+  margin: 16px 0 10px 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f0f6fc;
+}
+
+/* Story Item List */
+.story-list, .puzzle-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.story-item {
+  margin-bottom: 10px;
+}
+
+.story-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.story-headline {
+  color: #e6edf3;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-link:hover .story-headline {
+  text-decoration: underline;
+}
+
+.story-meta, .puzzle-meta {
+  color: #8b949e;
+  font-size: 0.75rem;
+}
+
+/* Expand / Collapse Button */
+.expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: #c9d1d9;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 6px;
+  margin-top: 4px;
+  border-radius: 4px;
+}
+
+.expand-btn:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.expand-btn .chevron {
+  width: 12px;
+  height: 12px;
+}
+
+/* Puzzles List */
+.puzzle-item {
+  margin-bottom: 8px;
+}
+
+.puzzle-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.puzzle-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.puzzle-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.puzzle-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 2px;
+}
+
+.puzzle-name {
+  color: #f0f6fc;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.puzzle-number {
+  color: #8b949e;
+  font-weight: 400;
+}
+
+.arrow-right {
+  width: 14px;
+  height: 14px;
+  stroke: #8b949e;
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.col-right, .col-left{
+    top:10vh;
+    position:sticky;
+    max-height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-middle{
+    max-height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.col-left{
+    gap: 5px;
+}
+.col-right{
+    gap:10px;
+}
+.col-container{
+    padding: 16vh 0 5vh 0;
+    display:flex;
+    justify-content: center;
+    border-radius: 12px;
+    width: 100%;
+    gap: 2vw;
+    height: max-content;
+}
+ @media (max-width:1150px){
+            .main-nav p, .side-nav p{
+                display: none;
+            }
+            .main-nav, .side-nav{
+                gap:0.5rem;
+            }
+            .searchiconhidden{
+                display:inline;
+            }
+            .header-search{
+                display: none;
+            }
+            .nav-section{
+                width: 100%;
+            }
+            .col-container{
+                flex-direction: column;
+                align-items: center;
+                padding: 0 0 10vh 0;
+            }
+            .col-left, .col-right, .left-card, .right-card, .center-card{
+                width: 500px;
+                position: relative;
+            }
+            .sidebar-footer{
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="linkedin-header">
+        <div class="logo-section">
+            <a href="/feed"><i class="fa-brands fa-linkedin-in logo"></i></a>
+            <i class="fa-solid fa-magnifying-glass searchiconhidden"></i>
+            <label class="header-search" for="search-input">
+                <i class="fa-solid fa-magnifying-glass searchicon"></i>
+                <input type="search" id="search-input">
+            </label>
+        </div>
+        <nav class="nav-section">
+            <ul class="main-nav">
+                <li><i class="fa-solid fa-house icons"></i><p>Home</p></li>
+                <li><i class="fa-solid fa-house icons"></i><p>Networks</p></li>
+                <li><i class="fa-solid fa-house icons"></i><p>Jobs</p></li>
+                <li><i class="fa-solid fa-house icons"></i><p>Messaging</p></li>
+                <li><i class="fa-solid fa-house icons"></i><p>Notifications</p></li>
+                <li><i class="fa-solid fa-house icons"></i><p>me</p></li>
+            </ul>
+            <ul class="side-nav">
+                <li><i class="fa-solid fa-house icons"></i><p>For Business</p></li>
+                <li><a href="">Reactivate Premium: <span>50% Off</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="col-container" >
+        <div class="col col-left">
+            <article class="left-card">
+                <div class="card-banner">
+                    <img src="workplace.jpg" alt="Background banner" />
+                </div>
+                <div class="card-body">
+                    <div class="avatar-container">
+                        <img src="logo.png" alt="DILEEP PD" class="avatar-img" />
+                    </div>
+                    <div class="user-info">
+                        <h2 class="user-name">DILEEP PD</h2>
+                        <p class="user-headline">
+                            Frontend Developer | React.js | Next.js | JavaScript | Python
+                        </p>
+                        <span class="user-location">Bangalore Urban, Karnataka</span>
+                    </div>
+                    <div class="company-badge">
+                        <i class="fa-solid fa-hexagon-nodes company-logo"></i>
+                        <span class="company-name">Neuraforge</span>
+                    </div>
+                </div>
+            </article>
+            <div class="left-card card-body">
+                <span class="user-location">Achieve your career goals</span>
+                <div class="company-badge">
+                    <i class="fa-solid fa-hexagon-nodes company-logo"></i>
+                    <span class="company-name">Reactivate Premium: 50% Off</span>
+                </div>
+            </div>
+            <div class="left-card card-body">
+                <div class="company-badge spacebw">
+                    <p class="user-headline">Profile Viewers:</p>
+                    <span style="color:rgb(29, 82, 173)">1</span>
+                </div>
+                <div class="company-badge spacebw">               
+                    <p class="user-headline">Post Impressions:</p>
+                    <span style="color:rgb(29, 82, 173)">2</span>
+                </div>
+            </div>
+            <div class="left-card card-body">
+                <div class="company-badge">
+                        <i class="fa-solid fa-hexagon-nodes company-logo"></i>
+                        <span class="company-name">Saved</span>
+                    </div>
+                    <div class="company-badge">
+                        <i class="fa-solid fa-hexagon-nodes company-logo"></i>
+                        <span class="company-name">Groups</span>
+                    </div>
+                    <div class="company-badge">
+                        <i class="fa-solid fa-hexagon-nodes company-logo"></i>
+                        <span class="company-name">Newsletters</span>
+                    </div>
+                    <div class="company-badge">
+                        <i class="fa-solid fa-hexagon-nodes company-logo"></i>
+                        <span class="company-name">Events</span>
+                    </div>
+            </div>
+        </div>
+        <section class="col col-middle" >
+            <article class="center-card" >
+                <div class="company-badge" style="flex-direction: column;">
+                    <h2 class="user-name">Hi DILEEP, are you looking for a job right now</h2>
+                    <p class="user-headline">Your response is only visible to you</p>
+                    
+                    <div style="display: flex; justify-content: space-between; gap: 10px;">
+                        <button style="padding: 5px;width: 50px; border-radius: 15px;">Yes</button><button style="padding: 5px;width: 50px; border-radius: 15px;">No</button>
+                    </div>
+                </div>
+            </article>
+            <article class="center-card">
+                <div  style="display: flex;  align-items: center; padding: 10px; gap: 10px; ">
+                    <img src="logo.png" alt="DILEEP PD" class="avatar-img" style="width:50px; height: 50px;" />
+                    <input type="text" style="background-color: transparent; border: 1px solid #cfd3d8; outline: none; height: 40px; max-height: 100%; border-radius: 30px; color: white; float: left; width: 80%; padding-left: 10px;" value="Start a Post">
+                </div>
+                <ul style="display: flex; align-items: center; justify-content: space-around; list-style: none;">
+                    <li style="display: flex; align-items: center; gap: 5px;"><i class="fa-solid fa-hexagon-nodes company-logo"></i>
+                        <span class="company-name">Video</span></li>
+                    <li style="display: flex; align-items: center; gap: 5px;"><i class="fa-solid fa-hexagon-nodes company-logo"></i>
+                        <span class="company-name">Photo</span></li>
+                    <li style="display: flex; align-items: center; gap: 5px;"><i class="fa-solid fa-hexagon-nodes company-logo"></i>
+                        <span class="company-name">write article</span></li>
+                </ul>
+            </article>
+            <article class="center-card">
+                <section style="width: 100%;">
+                    <nav style="display: flex; justify-content: space-between;  align-items:start; padding: 10px; width: 100%;">
+                    <div style="display: flex; height: 50px; gap: 10px;">
+                        <img src="logo.png" alt="DILEEP PD" class="avatar-img" style="width:50px; height: 50px;" />
+                        <div style="display: flex; flex-direction: column; gap: 1px;">
+                            <h2 class="user-name">Cisco</h2>
+                            <p class="user-location">770000 followers</p>
+                            <p class="user-location">promoted</p>
+                        </div>
+                    </div>
+                    <button style="float: right; background-color: transparent; border: none; color: white;">...</button>
+                    </nav>
+                    <p class="user-headline">Design next-gen silicon & networking tech. From ASIC to high-speed systems, build the core of global networks in world-class environments at Cisco.</p>
+                </section>
+                <img src="Version-1_1080x1080png.jpg" alt="cisco hiring" style="width: 100%; height: auto;">
+                <div class="ad-cta-row">
+                    <div class="cta-text">
+                        <h3 class="cta-title">Build the Silicon Powering the AI Era at Cisco.</h3>
+                        <span class="cta-domain">careers.cisco.com</span>
+                    </div>
+                    <button type="button" class="apply-btn">Apply</button>
+                </div>
+                <footer class="ad-footer">
+    <!-- Left Interaction Actions -->
+    <div class="action-buttons">
+      <button type="button" class="action-btn">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+        </svg>
+        <span>50</span>
+      </button>
+
+      <button type="button" class="action-btn">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </button>
+
+      <button type="button" class="action-btn">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 1l4 4-4 4"/>
+          <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+          <path d="M7 23l-4-4 4-4"/>
+          <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+        </svg>
+        <span>4</span>
+      </button>
+
+      <button type="button" class="action-btn">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Right Reaction Icons Stack -->
+    <div class="reactions-stack">
+      <span class="reaction-badge like-badge">👍</span>
+      <span class="reaction-badge clap-badge">👏</span>
+      <span class="reaction-badge laugh-badge">😄</span>
+    </div>
+  </footer>
+            </article>
+            <article class="center-card">
+                <section style="width: 100%;">
+                    <nav style="display: flex; justify-content: space-between;  align-items:start; padding: 10px; width: 100%;">
+                    <div style="display: flex; height: 50px; gap: 10px;">
+                        <img src="logo.png" alt="DILEEP PD" class="avatar-img" style="width:50px; height: 50px;" />
+                        <div style="display: flex; flex-direction: column; gap: 1px;">
+                            <h2 class="user-name">Cisco</h2>
+                            <p class="user-location">770000 followers</p>
+                            <p class="user-location">promoted</p>
+                        </div>
+                    </div>
+                    <button style="float: right; background-color: transparent; border: none; color: white;">...</button>
+                    </nav>
+                    <p class="user-headline">Design next-gen silicon & networking tech. From ASIC to high-speed systems, build the core of global networks in world-class environments at Cisco.</p>
+                </section>
+                <img src="Version-1_1080x1080png.jpg" alt="cisco hiring" style="width: 100%; height: auto;">
+                <div class="ad-cta-row">
+                    <div class="cta-text">
+                        <h3 class="cta-title">Build the Silicon Powering the AI Era at Cisco.</h3>
+                        <span class="cta-domain">careers.cisco.com</span>
+                    </div>
+                    <button type="button" class="apply-btn">Apply</button>
+                </div>
+                <footer class="ad-footer">
+                    <div class="action-buttons">
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                        </svg>
+                        <span>50</span>
+                    </button>
+
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </button>
+
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 1l4 4-4 4"/>
+                        <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                        <path d="M7 23l-4-4 4-4"/>
+                        <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                        </svg>
+                        <span>4</span>
+                    </button>
+
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                    </div>
+
+                    <div class="reactions-stack">
+                    <span class="reaction-badge like-badge">👍</span>
+                    <span class="reaction-badge clap-badge">👏</span>
+                    <span class="reaction-badge laugh-badge">😄</span>
+                    </div>
+                </footer>
+            </article>
+            <article class="center-card">
+                <section style="width: 100%;">
+                    <nav style="display: flex; justify-content: space-between;  align-items:start; padding: 10px; width: 100%;">
+                    <div style="display: flex; height: 50px; gap: 10px;">
+                        <img src="logo.png" alt="DILEEP PD" class="avatar-img" style="width:50px; height: 50px;" />
+                        <div style="display: flex; flex-direction: column; gap: 1px;">
+                            <h2 class="user-name">Cisco</h2>
+                            <p class="user-location">770000 followers</p>
+                            <p class="user-location">promoted</p>
+                        </div>
+                    </div>
+                    <button style="float: right; background-color: transparent; border: none; color: white;">...</button>
+                    </nav>
+                    <p class="user-headline">Design next-gen silicon & networking tech. From ASIC to high-speed systems, build the core of global networks in world-class environments at Cisco.</p>
+                </section>
+                <img src="Version-1_1080x1080png.jpg" alt="cisco hiring" style="width: 100%; height: auto;">
+                <div class="ad-cta-row">
+                    <div class="cta-text">
+                        <h3 class="cta-title">Build the Silicon Powering the AI Era at Cisco.</h3>
+                        <span class="cta-domain">careers.cisco.com</span>
+                    </div>
+                    <button type="button" class="apply-btn">Apply</button>
+                </div>
+                <footer class="ad-footer">
+                    <div class="action-buttons">
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                        </svg>
+                        <span>50</span>
+                    </button>
+
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </button>
+
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 1l4 4-4 4"/>
+                        <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                        <path d="M7 23l-4-4 4-4"/>
+                        <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                        </svg>
+                        <span>4</span>
+                    </button>
+
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                    </div>
+
+                    <div class="reactions-stack">
+                    <span class="reaction-badge like-badge">👍</span>
+                    <span class="reaction-badge clap-badge">👏</span>
+                    <span class="reaction-badge laugh-badge">😄</span>
+                    </div>
+                </footer>
+            </article>
+            <article class="center-card">
+                <section style="width: 100%;">
+                    <nav style="display: flex; justify-content: space-between;  align-items:start; padding: 10px; width: 100%;">
+                    <div style="display: flex; height: 50px; gap: 10px;">
+                        <img src="logo.png" alt="DILEEP PD" class="avatar-img" style="width:50px; height: 50px;" />
+                        <div style="display: flex; flex-direction: column; gap: 1px;">
+                            <h2 class="user-name">Cisco</h2>
+                            <p class="user-location">770000 followers</p>
+                            <p class="user-location">promoted</p>
+                        </div>
+                    </div>
+                    <button style="float: right; background-color: transparent; border: none; color: white;">...</button>
+                    </nav>
+                    <p class="user-headline">Design next-gen silicon & networking tech. From ASIC to high-speed systems, build the core of global networks in world-class environments at Cisco.</p>
+                </section>
+                <img src="Version-1_1080x1080png.jpg" alt="cisco hiring" style="width: 100%; height: auto;">
+                <div class="ad-cta-row">
+                    <div class="cta-text">
+                        <h3 class="cta-title">Build the Silicon Powering the AI Era at Cisco.</h3>
+                        <span class="cta-domain">careers.cisco.com</span>
+                    </div>
+                    <button type="button" class="apply-btn">Apply</button>
+                </div>
+                <footer class="ad-footer">
+                    <div class="action-buttons">
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                        </svg>
+                        <span>50</span>
+                    </button>
+
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </button>
+
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 1l4 4-4 4"/>
+                        <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                        <path d="M7 23l-4-4 4-4"/>
+                        <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                        </svg>
+                        <span>4</span>
+                    </button>
+
+                    <button type="button" class="action-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                    </div>
+
+                    <div class="reactions-stack">
+                    <span class="reaction-badge like-badge">👍</span>
+                    <span class="reaction-badge clap-badge">👏</span>
+                    <span class="reaction-badge laugh-badge">😄</span>
+                    </div>
+                </footer>
+            </article>
+        </section>
+        <aside class="col col-right">
+            <section  class="right-card card-body" style="padding-top:15px;">
+                <div class="news-header">
+                    <h2 class="card-title">LinkedIn News</h2>
+                    <button class="info-btn" aria-label="News Information">
+                    <svg viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 1a7 7 0 1 0 7 7A7 7 0 0 0 8 1zm.75 10.5h-1.5v-4h1.5zm0-5.5h-1.5V4.5h1.5z"/>
+                    </svg>
+                    </button>
+                </div>
+
+                <section class="news-section">
+                    <h3 class="section-subtitle">Top stories</h3>
+                    <ul class="story-list">
+                    <li class="story-item">
+                        <a href="#" class="story-link">
+                        <span class="story-headline">Green card curbs may barely dent Indian IT</span>
+                        <span class="story-meta">1h ago &bull; 2,087 readers</span>
+                        </a>
+                    </li>
+                    <li class="story-item">
+                        <a href="#" class="story-link">
+                        <span class="story-headline">Big Tech powers up renewable energy ...</span>
+                        <span class="story-meta">1h ago &bull; 767 readers</span>
+                        </a>
+                    </li>
+                    <li class="story-item">
+                        <a href="#" class="story-link">
+                        <span class="story-headline">Rural auto sales zoom ahead despite wea...</span>
+                        <span class="story-meta">1h ago &bull; 505 readers</span>
+                        </a>
+                    </li>
+                    <li class="story-item">
+                        <a href="#" class="story-link">
+                        <span class="story-headline">Top AI conversations of the week</span>
+                        <span class="story-meta">2d ago &bull; 16,620 readers</span>
+                        </a>
+                    </li>
+                    <li class="story-item">
+                        <a href="#" class="story-link">
+                        <span class="story-headline">India's Gen Z conversations this week</span>
+                        <span class="story-meta">2d ago &bull; 4,663 readers</span>
+                        </a>
+                    </li>
+                    </ul>
+
+                    <button type="button" class="expand-btn">
+                    <span>Show more news</span>
+                    <svg class="chevron" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4.5 6.5l3.5 3.5 3.5-3.5H4.5z"/>
+                    </svg>
+                    </button>
+                </section>
+
+                <section class="puzzles-section">
+                    <h3 class="section-title">Today's puzzles</h3>
+                    <ul class="puzzle-list">
+                    <li class="puzzle-item">
+                        <a href="#" class="puzzle-link">
+                        <i class="fa-solid fa-hexagon-nodes puzzle-icon"></i>
+                        <div class="puzzle-details">
+                            <span class="puzzle-name">Zip <span class="puzzle-number">#573</span></span>
+                            <span class="puzzle-meta">10 connections played</span>
+                        </div>
+                        <svg class="arrow-right" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M6 3.5l4.5 4.5L6 12.5"/>
+                        </svg>
+                        </a>
+                    </li>
+                    <li class="puzzle-item">
+                        <a href="#" class="puzzle-link">
+                        <i class="fa-solid fa-hexagon-nodes puzzle-icon"></i>
+                        <div class="puzzle-details">
+                            <span class="puzzle-name">Wend <span class="puzzle-number">#125</span></span>
+                            <span class="puzzle-meta">5 connections played</span>
+                        </div>
+                        <svg class="arrow-right" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M6 3.5l4.5 4.5L6 12.5"/>
+                        </svg>
+                        </a>
+                    </li>
+                    <li class="puzzle-item">
+                        <a href="#" class="puzzle-link">
+                        <i class="fa-solid fa-hexagon-nodes puzzle-icon"></i>
+                        <div class="puzzle-details">
+                            <span class="puzzle-name">Patches <span class="puzzle-number">#208</span></span>
+                            <span class="puzzle-meta">6 connections played</span>
+                        </div>
+                        <svg class="arrow-right" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M6 3.5l4.5 4.5L6 12.5"/>
+                        </svg>
+                        </a>
+                    </li>
+                    <li class="puzzle-item">
+                        <a href="#" class="puzzle-link">
+                        <i class="fa-solid fa-hexagon-nodes puzzle-icon"></i>
+                        <div class="puzzle-details">
+                            <span class="puzzle-name">Mini Sudoku <span class="puzzle-number">#426</span></span>
+                            <span class="puzzle-meta">2 connections played</span>
+                        </div>
+                        <svg class="arrow-right" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M6 3.5l4.5 4.5L6 12.5"/>
+                        </svg>
+                        </a>
+                    </li>
+                    </ul>
+
+                    <button type="button" class="expand-btn">
+                    <span>Show more</span>
+                    <svg class="chevron" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4.5 6.5l3.5 3.5 3.5-3.5H4.5z"/>
+                    </svg>
+                    </button>
+                </section>
+            </section>
+            <footer class="sidebar-footer">
+                <ul class="footer-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li>
+                    <a href="#" class="dropdown-link">
+                        Privacy &amp; Terms
+                        <svg class="caret" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4 6l4 4 4-4H4z" />
+                        </svg>
+                    </a>
+                    </li>
+                    <li><a href="#">Ad Choices</a></li>
+                    <li><a href="#">Advertising</a></li>
+                    <li>
+                    <a href="#" class="dropdown-link">
+                        Business Services
+                        <svg class="caret" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4 6l4 4 4-4H4z" />
+                        </svg>
+                    </a>
+                    </li>
+                    <li><a href="#">Get the LinkedIn app</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+
+                <div class="footer-copyright">
+                    <span class="brand-text">Linked<span class="brand-badge">in</span></span>
+                    <span class="copyright-text">LinkedIn Corporation &copy; 2026</span>
+                </div>
+            </footer>
+        </aside>
+    </section>
+    
+    
+</body>
+</html>
